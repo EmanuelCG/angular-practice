@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>Crear Tareas</h3>
+  <form #formCreate="ngForm" (ngSubmit)="onSubmit(formCreate)">
+    <p>
+      <label for="name">Nombre de la tarea:</label>
+      <input type="text" name="name" [(ngModel)] = "task.name"><br>
+    </p>
+    <p>
+      <label for="area">Area responsable: </label>
+      <input type="text" name="area" [(ngModel)] = "task.area"><br>
+    </p>
+    <p>
+      <label for="duration">Duración de la tarea (horas): </label>
+      <input type="text" name="duration" [(ngModel)] = "task.duration"><br>
+    </p>
+    <p>
+      <label for="description">Descripción de la tarea: </label>
+      <textarea name="description" [(ngModel)] = "task.description"></textarea>
+    </p>
+    <br>
+    <input type="submit" value="Enviar">
+  </form>
+</div>
